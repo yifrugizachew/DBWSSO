@@ -2,8 +2,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>DBWSSO WUMIS v1.0.0</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,16 +22,9 @@
           },
           colors: {
             water: {
-              50: '#effafe',
-              100: '#dff3ff',
-              200: '#b8e9ff',
-              300: '#78d8ff',
-              400: '#31c3ff',
-              500: '#06a9e8',
-              600: '#0088c7',
-              700: '#036da1',
-              800: '#075c85',
-              900: '#0c4d6e'
+              50:'#effafe',100:'#dff3ff',200:'#b8e9ff',300:'#78d8ff',
+              400:'#31c3ff',500:'#06a9e8',600:'#0088c7',700:'#036da1',
+              800:'#075c85',900:'#0c4d6e'
             }
           },
           boxShadow: {
@@ -49,14 +42,15 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    body { background: linear-gradient(135deg, #f8fbff 0%, #effafe 42%, #f8fafc 100%); }
-    .dt-container .dataTables_filter input,
+    body {
+      background: linear-gradient(135deg,#f8fbff 0%,#effafe 42%,#f8fafc 100%);
+    }
     .dataTables_wrapper .dataTables_filter input {
       border: 1px solid #dbeafe !important;
-      border-radius: 0.75rem !important;
+      border-radius: .75rem !important;
       padding: .5rem .75rem !important;
-      outline: none !important;
       background: white !important;
+      outline: none !important;
     }
     table.dataTable thead th {
       border-bottom: 1px solid #dbeafe !important;
@@ -65,9 +59,14 @@
       text-transform: uppercase;
       letter-spacing: .06em;
     }
-    table.dataTable.no-footer { border-bottom: 1px solid #e0f2fe !important; }
-    .nav-active { background:#0369a1; color:white; box-shadow:0 10px 22px rgba(3,105,161,.25); }
-    .nav-active i { color:white; }
+    table.dataTable.no-footer {
+      border-bottom: 1px solid #e0f2fe !important;
+    }
+    .nav-active {
+      background: #0369a1;
+      color: white;
+      box-shadow: 0 10px 22px rgba(3,105,161,.25);
+    }
     .modal { display:none; }
     .modal.show { display:flex; }
   </style>
@@ -89,29 +88,17 @@
       </div>
 
       <nav class="space-y-2">
-        <button data-route="dashboard" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800">
-          <i data-lucide="layout-dashboard" class="h-5 w-5"></i> Dashboard
-        </button>
-        <button data-route="customers" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800">
-          <i data-lucide="users" class="h-5 w-5"></i> Customers
-        </button>
-        <button data-route="readings" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800">
-          <i data-lucide="gauge" class="h-5 w-5"></i> Reading Management
-        </button>
-        <button data-route="billing" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800">
-          <i data-lucide="receipt" class="h-5 w-5"></i> Billing & Payment
-        </button>
-        <button data-route="maintenance" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800">
-          <i data-lucide="wrench" class="h-5 w-5"></i> Maintenance
-        </button>
-        <button data-route="settings" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800">
-          <i data-lucide="settings" class="h-5 w-5"></i> Master Data
-        </button>
+        <button data-route="dashboard" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800"><i data-lucide="layout-dashboard"></i>Dashboard</button>
+        <button data-route="customers" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800"><i data-lucide="users"></i>Customers</button>
+        <button data-route="readings" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800"><i data-lucide="gauge"></i>Reading Management</button>
+        <button data-route="billing" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800"><i data-lucide="receipt"></i>Billing & Payment</button>
+        <button data-route="maintenance" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800"><i data-lucide="wrench"></i>Maintenance</button>
+        <button data-route="settings" class="nav-btn flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left font-semibold text-slate-600 hover:bg-water-50 hover:text-water-800"><i data-lucide="settings"></i>Master Data</button>
       </nav>
 
       <div class="absolute bottom-5 left-5 right-5 rounded-3xl bg-gradient-to-br from-water-700 to-water-900 p-5 text-white">
         <p class="font-display text-sm font-bold">Debre Berhan Water and Sewerage Supply Organization</p>
-        <p class="mt-2 text-xs text-sky-100">Professional utility operations, billing, and meter-reading control center.</p>
+        <p class="mt-2 text-xs text-sky-100">Customer registry, reading control, billing, payment, and maintenance operations.</p>
       </div>
     </aside>
 
@@ -123,11 +110,9 @@
             <h2 id="pageTitle" class="font-display text-2xl font-extrabold text-slate-900">Dashboard</h2>
           </div>
           <div class="flex flex-wrap items-center gap-2">
-            <select id="fy" class="rounded-2xl border border-sky-100 bg-white px-4 py-2 text-sm font-semibold shadow-sm outline-none focus:border-water-400"></select>
-            <select id="fm" class="rounded-2xl border border-sky-100 bg-white px-4 py-2 text-sm font-semibold shadow-sm outline-none focus:border-water-400"></select>
-            <button onclick="refreshCurrent()" class="rounded-2xl bg-water-700 px-4 py-2 text-sm font-bold text-white shadow-soft hover:bg-water-800">
-              Refresh
-            </button>
+            <select id="fy" class="rounded-2xl border border-sky-100 bg-white px-4 py-2 text-sm font-semibold shadow-sm outline-none"></select>
+            <select id="fm" class="rounded-2xl border border-sky-100 bg-white px-4 py-2 text-sm font-semibold shadow-sm outline-none"></select>
+            <button onclick="refreshCurrent()" class="rounded-2xl bg-water-700 px-4 py-2 text-sm font-bold text-white shadow-soft hover:bg-water-800">Refresh</button>
           </div>
         </div>
       </header>
@@ -149,42 +134,63 @@
   </div>
 
 <script>
+const jq = window.jQuery;
 const API = '';
+
 const monthNames = {
   1:'መስከረም',2:'ጥቅምት',3:'ኅዳር',4:'ታኅሣሥ',5:'ጥር',6:'የካቲት',7:'መጋቢት',
   8:'ሚያዝያ',9:'ግንቦት',10:'ሰኔ',11:'ሐምሌ',12:'ነሐሴ',13:'ጳጉሜ'
 };
+
 let state = {
-  route:'dashboard',
-  refs:{zones:[], groups:[], employees:[], devices:[]},
-  charts:{}
+  route: 'dashboard',
+  refs: { zones: [], groups: [], employees: [], devices: [] },
+  cache: {},
+  charts: {}
 };
 
-function $(id){ return document.getElementById(id); }
+function el(id){ return document.getElementById(id); }
+function fy(){ return Number(el('fy').value); }
+function fm(){ return Number(el('fm').value); }
 
-function fy(){ return Number($('fy').value); }
-function fm(){ return Number($('fm').value); }
+function cacheRow(row) {
+  const key = row.id || String(Math.random()).slice(2);
+  state.cache[key] = row;
+  return key;
+}
+function cached(key){ return state.cache[key]; }
 
-function toast(msg){
-  const el=$('toast');
-  el.textContent=msg; el.classList.remove('hidden');
-  setTimeout(()=>el.classList.add('hidden'),2600);
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, s => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[s]));
 }
 
-async function api(path, options={}){
+function money(n) {
+  return Number(n || 0).toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
+function toast(msg) {
+  const t = el('toast');
+  t.textContent = msg;
+  t.classList.remove('hidden');
+  setTimeout(() => t.classList.add('hidden'), 2600);
+}
+
+async function api(path, options = {}) {
   const res = await fetch(API + path, {
-    headers:{'Content-Type':'application/json', ...(options.headers||{})},
+    headers: {'Content-Type':'application/json', ...(options.headers || {})},
     ...options
   });
-  const data = await res.json().catch(()=>({}));
-  if(!res.ok) throw new Error(data.error || 'Request failed');
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || 'Request failed');
   return data;
 }
 
-function money(n){ return Number(n||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}); }
-function esc(v){ return String(v ?? '').replace(/[&<>"']/g, s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s])); }
-
-function input(name,label,type='text',value='',extra=''){
+function input(name,label,type='text',value='',extra='') {
   return `<label class="block">
     <span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">${label}</span>
     <input name="${name}" type="${type}" value="${esc(value)}" ${extra}
@@ -192,47 +198,55 @@ function input(name,label,type='text',value='',extra=''){
   </label>`;
 }
 
-function select(name,label,items,value='',labelKey='name'){
+function select(name,label,items,value='',labelKey='name') {
   return `<label class="block">
     <span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">${label}</span>
     <select name="${name}" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none focus:border-water-400 focus:ring-4 focus:ring-water-100">
       <option value="">-- Select --</option>
-      ${items.map(x=>`<option value="${x.id}" ${x.id===value?'selected':''}>${esc(x[labelKey] || x.name || x.code)}</option>`).join('')}
+      ${(items || []).map(x => `<option value="${x.id}" ${x.id === value ? 'selected' : ''}>${esc(x[labelKey] || x.name || x.code || x.serial_number)}</option>`).join('')}
     </select>
   </label>`;
 }
 
-function boolSelect(name,label,value=false){
+function boolSelect(name,label,value=false) {
   return `<label class="block">
     <span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">${label}</span>
-    <select name="${name}" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none focus:border-water-400 focus:ring-4 focus:ring-water-100">
-      <option value="false" ${!value?'selected':''}>No</option>
-      <option value="true" ${value?'selected':''}>Yes</option>
+    <select name="${name}" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none">
+      <option value="false" ${!value ? 'selected' : ''}>No</option>
+      <option value="true" ${value ? 'selected' : ''}>Yes</option>
     </select>
   </label>`;
 }
 
-function card(title,value,icon,color='water'){
+function card(title,value,icon,tone='water') {
+  const tones = {
+    water:'bg-water-50 text-water-700',
+    red:'bg-red-50 text-red-700',
+    orange:'bg-orange-50 text-orange-700',
+    slate:'bg-slate-100 text-slate-700'
+  };
   return `<div class="rounded-3xl border border-sky-100 bg-white p-6 shadow-soft">
     <div class="flex items-start justify-between">
       <div>
         <p class="text-sm font-bold text-slate-500">${title}</p>
         <p class="mt-2 font-display text-3xl font-extrabold text-slate-900">${value}</p>
       </div>
-      <div class="grid h-12 w-12 place-items-center rounded-2xl bg-${color}-50 text-${color}-700">
+      <div class="grid h-12 w-12 place-items-center rounded-2xl ${tones[tone] || tones.water}">
         <i data-lucide="${icon}" class="h-6 w-6"></i>
       </div>
     </div>
   </div>`;
 }
 
-function pageShell(title, actions='', body=''){
-  $('pageTitle').textContent = title;
+function pageShell(title,actions='',body='') {
+  el('pageTitle').textContent = title;
   return `<div class="space-y-6">
     <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
       <div>
         <h3 class="font-display text-xl font-extrabold text-slate-900">${title}</h3>
-        <p class="text-sm font-medium text-slate-500">Fiscal Period: <span class="font-bold text-water-800">${fy()} ${monthNames[fm()]}</span></p>
+        <p class="text-sm font-medium text-slate-500">Reading Period:
+          <span class="font-bold text-water-800">${fy()} ${monthNames[fm()]}</span>
+        </p>
       </div>
       <div class="flex flex-wrap gap-2">${actions}</div>
     </div>
@@ -240,54 +254,76 @@ function pageShell(title, actions='', body=''){
   </div>`;
 }
 
-function table(id, heads){
+function table(id,heads) {
   return `<div class="overflow-hidden rounded-3xl border border-sky-100 bg-white p-4 shadow-soft">
     <table id="${id}" class="display w-full">
-      <thead><tr>${heads.map(h=>`<th>${h}</th>`).join('')}</tr></thead>
+      <thead><tr>${heads.map(h => `<th>${h}</th>`).join('')}</tr></thead>
       <tbody></tbody>
     </table>
   </div>`;
 }
 
-function initDT(id, rows, cols){
-  if ($.fn.DataTable.isDataTable('#'+id)) $('#'+id).DataTable().destroy();
-  const tbody = document.querySelector('#'+id+' tbody');
-  tbody.innerHTML = rows.map(r=>`<tr>${cols.map(c=>`<td>${typeof c==='function'?c(r):esc(r[c])}</td>`).join('')}</tr>`).join('');
-  $('#'+id).DataTable({pageLength:10, responsive:true, order:[]});
+function initDT(id,rows,cols) {
+  const selector = '#' + id;
+
+  if (!jq || !jq.fn || !jq.fn.DataTable) {
+    throw new Error('jQuery DataTables failed to load. Check CDN/network access.');
+  }
+
+  if (jq.fn.DataTable.isDataTable(selector)) {
+    jq(selector).DataTable().clear().destroy();
+  }
+
+  const tbody = document.querySelector(selector + ' tbody');
+  tbody.innerHTML = (rows || []).map(r => {
+    return `<tr>${cols.map(c => `<td>${typeof c === 'function' ? c(r) : esc(r[c])}</td>`).join('')}</tr>`;
+  }).join('');
+
+  jq(selector).DataTable({
+    pageLength: 10,
+    order: [],
+    autoWidth: false
+  });
 }
 
-async function loadRefs(){
-  state.refs = await api('/api/reference-data');
-}
-
-function openModal(title, html, onSubmit){
-  $('modalTitle').textContent=title;
-  $('modalForm').innerHTML = html + `<div class="md:col-span-2 flex justify-end gap-2 pt-2">
+function openModal(title,html,onSubmit,hideSubmit=false) {
+  el('modalTitle').textContent = title;
+  el('modalForm').innerHTML = html + `<div class="md:col-span-2 flex justify-end gap-2 pt-2">
     <button type="button" onclick="closeModal()" class="rounded-2xl border border-slate-200 px-5 py-3 font-bold text-slate-600">Cancel</button>
-    <button class="rounded-2xl bg-water-700 px-5 py-3 font-bold text-white shadow-soft hover:bg-water-800">Save</button>
+    <button ${hideSubmit ? 'style="display:none"' : ''} class="rounded-2xl bg-water-700 px-5 py-3 font-bold text-white shadow-soft hover:bg-water-800">Save</button>
   </div>`;
-  $('modalForm').onsubmit = async (e)=>{
+
+  el('modalForm').onsubmit = async e => {
     e.preventDefault();
     const fd = new FormData(e.target);
     const obj = {};
-    for(const [k,v] of fd.entries()){
-      if(v === '') obj[k] = null;
-      else if(['direct_register','is_active'].includes(k)) obj[k] = v === 'true';
-      else if(['fiscal_year','fiscal_month','previous_reading','current_reading','rate','amount','tax','penalty','total_amount','paid_amount'].includes(k)) obj[k] = Number(v);
+    for (const [k,v] of fd.entries()) {
+      if (v === '') obj[k] = null;
+      else if (['direct_register','is_active'].includes(k)) obj[k] = v === 'true';
+      else if (['fiscal_year','fiscal_month','previous_reading','current_reading','paid_amount'].includes(k)) obj[k] = Number(v);
       else obj[k] = v;
     }
-    try { await onSubmit(obj); closeModal(); toast('Saved successfully'); refreshCurrent(); }
-    catch(err){ toast(err.message); }
+    try {
+      await onSubmit(obj);
+      closeModal();
+      toast('Saved successfully');
+      refreshCurrent();
+    } catch(err) {
+      toast(err.message);
+    }
   };
-  $('modal').classList.add('show');
+
+  el('modal').classList.add('show');
   lucide.createIcons();
 }
 
-function closeModal(){ $('modal').classList.remove('show'); }
+function closeModal(){ el('modal').classList.remove('show'); }
 
-async function renderDashboard(){
+async function loadRefs(){ state.refs = await api('/api/reference-data'); }
+
+async function renderDashboard() {
   const d = await api(`/api/dashboard?fiscal_year=${fy()}&fiscal_month=${fm()}`);
-  const body = `
+  el('view').innerHTML = pageShell('Dashboard','',`
     <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
       ${card('Total Customers', d.total_customers, 'users')}
       ${card('Total Consumption', `${money(d.total_consumption)} m³`, 'activity')}
@@ -310,262 +346,322 @@ async function renderDashboard(){
       </div>
     </div>
 
-    <div class="grid gap-6 lg:grid-cols-2">
-      <div class="rounded-3xl border border-sky-100 bg-white p-6 shadow-soft">
-        <h4 class="mb-3 font-display font-extrabold text-slate-900">Operational Notes</h4>
-        <ul class="space-y-3 text-sm text-slate-600">
-          <li class="flex gap-2"><i data-lucide="check-circle" class="h-5 w-5 text-water-700"></i> Bill calculations are generated automatically from approved meter readings.</li>
-          <li class="flex gap-2"><i data-lucide="check-circle" class="h-5 w-5 text-water-700"></i> Fiscal year and fiscal month are enforced on every reading and bill.</li>
-          <li class="flex gap-2"><i data-lucide="check-circle" class="h-5 w-5 text-water-700"></i> Negative, zero, exaggerated, and disconnected readings are analyzed by period.</li>
-        </ul>
-      </div>
-      <div class="rounded-3xl border border-sky-100 bg-gradient-to-br from-water-700 to-water-900 p-6 text-white shadow-soft">
-        <p class="text-sm font-bold text-sky-100">Current Reading Period</p>
-        <p class="mt-2 font-display text-4xl font-extrabold">${fy()} ${monthNames[fm()]}</p>
-        <p class="mt-4 text-sm text-sky-100">DBWSSO WUMIS v1.0.0 — integrated customer registry, metering, billing, payment, and maintenance management.</p>
-      </div>
+    <div class="rounded-3xl border border-sky-100 bg-gradient-to-br from-water-700 to-water-900 p-6 text-white shadow-soft">
+      <p class="text-sm font-bold text-sky-100">Current Reading Period</p>
+      <p class="mt-2 font-display text-4xl font-extrabold">${fy()} ${monthNames[fm()]}</p>
+      <p class="mt-4 text-sm text-sky-100">DBWSSO WUMIS v1.0.0 integrated utility operation platform.</p>
     </div>
-  `;
-  $('view').innerHTML = pageShell('Dashboard', '', body);
+  `);
 
-  new Chart($('consumptionChart'), {
-    type:'line',
-    data:{labels:d.trend.map(x=>`${x.fiscal_year}/${monthNames[x.fiscal_month]}`), datasets:[{
-      label:'Consumption m³', data:d.trend.map(x=>x.total_consumption), borderColor:'#0284c7',
-      backgroundColor:'rgba(14,165,233,.12)', fill:true, tension:.35
-    }]},
-    options:{plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}}}
+  if (state.charts.consumption) state.charts.consumption.destroy();
+  if (state.charts.analysis) state.charts.analysis.destroy();
+
+  state.charts.consumption = new Chart(el('consumptionChart'), {
+    type: 'line',
+    data: {
+      labels: (d.trend || []).map(x => `${x.fiscal_year}/${monthNames[x.fiscal_month]}`),
+      datasets: [{
+        label: 'Consumption m³',
+        data: (d.trend || []).map(x => x.total_consumption),
+        borderColor: '#0284c7',
+        backgroundColor: 'rgba(14,165,233,.12)',
+        fill: true,
+        tension: .35
+      }]
+    },
+    options: { plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}} }
   });
-  new Chart($('analysisChart'), {
-    type:'doughnut',
-    data:{labels:['Normal','Negative','Exaggerated','Zero','Disconnected'], datasets:[{
-      data:[d.analysis.normal,d.analysis.negative,d.analysis.exaggerated,d.analysis.zero,d.analysis.disconnected],
-      backgroundColor:['#0284c7','#ef4444','#f97316','#94a3b8','#111827']
-    }]},
-    options:{plugins:{legend:{position:'bottom'}}}
+
+  state.charts.analysis = new Chart(el('analysisChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Normal','Negative','Exaggerated','Zero','Disconnected'],
+      datasets: [{
+        data: [
+          d.analysis.normal || 0,
+          d.analysis.negative || 0,
+          d.analysis.exaggerated || 0,
+          d.analysis.zero || 0,
+          d.analysis.disconnected || 0
+        ],
+        backgroundColor: ['#0284c7','#ef4444','#f97316','#94a3b8','#111827']
+      }]
+    },
+    options: { plugins:{legend:{position:'bottom'}} }
   });
 }
 
-async function renderCustomers(){
+async function renderCustomers() {
   const rows = await api('/api/customers');
-  $('view').innerHTML = pageShell('Customer Management',
+  el('view').innerHTML = pageShell('Customer Management',
     `<button onclick="customerForm()" class="rounded-2xl bg-water-700 px-5 py-3 font-bold text-white shadow-soft hover:bg-water-800">Add Customer</button>`,
     table('customerTable',['Code','Old Code','Name','Phone','Zone','Group','Direct','Status','Actions'])
   );
+
   initDT('customerTable', rows, [
     'customer_code','old_code','name','phone',
-    r=>r.zone_name||'', r=>r.reading_group_name||'',
-    r=>r.direct_register?'Yes':'No','status',
-    r=>`<div class="flex gap-1">
-      <button class="rounded-xl bg-water-50 px-3 py-2 text-xs font-bold text-water-700" onclick='customerDetails(${JSON.stringify(r)})'>Details</button>
-      <button class="rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700" onclick='customerForm(${JSON.stringify(r)})'>Edit</button>
-      <button class="rounded-xl bg-red-50 px-3 py-2 text-xs font-bold text-red-700" onclick="deleteRow('/api/customers/${r.id}')">Delete</button>
-    </div>`
+    r => r.zone_name || '',
+    r => r.reading_group_name || '',
+    r => r.direct_register ? 'Yes' : 'No',
+    'status',
+    r => {
+      const k = cacheRow(r);
+      return `<div class="flex gap-1">
+        <button class="rounded-xl bg-water-50 px-3 py-2 text-xs font-bold text-water-700" onclick="customerDetails('${k}')">Details</button>
+        <button class="rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700" onclick="customerForm(cached('${k}'))">Edit</button>
+        <button class="rounded-xl bg-red-50 px-3 py-2 text-xs font-bold text-red-700" onclick="deleteRow('/api/customers/${r.id}')">Delete</button>
+      </div>`;
+    }
   ]);
 }
 
-function customerForm(r={}){
-  openModal(r.id?'Edit Customer':'Add Customer', `
-    ${input('customer_code','Customer Code','text',r.customer_code||'', 'required')}
-    ${input('old_code','Old Code','text',r.old_code||'')}
-    ${input('name','Customer Name','text',r.name||'', 'required')}
-    ${input('phone','Phone','text',r.phone||'')}
-    ${input('email','Email','email',r.email||'')}
-    ${input('address','Address','text',r.address||'')}
+function customerForm(r = {}) {
+  openModal(r.id ? 'Edit Customer' : 'Add Customer', `
+    ${input('customer_code','Customer Code','text',r.customer_code || '', 'required')}
+    ${input('old_code','Old Code','text',r.old_code || '')}
+    ${input('name','Customer Name','text',r.name || '', 'required')}
+    ${input('phone','Phone','text',r.phone || '')}
+    ${input('email','Email','email',r.email || '')}
+    ${input('address','Address','text',r.address || '')}
     ${select('zone_id','Zone',state.refs.zones,r.zone_id)}
     ${select('reading_group_id','Reading Group',state.refs.groups,r.reading_group_id)}
     ${select('device_id','Meter Device',state.refs.devices,r.device_id,'serial_number')}
     ${boolSelect('direct_register','Direct Register',r.direct_register)}
-    <label class="block"><span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Status</span>
+    <label class="block">
+      <span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Status</span>
       <select name="status" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
-        ${['active','disconnected','inactive'].map(s=>`<option value="${s}" ${r.status===s?'selected':''}>${s}</option>`).join('')}
+        ${['active','disconnected','inactive'].map(s => `<option value="${s}" ${r.status === s ? 'selected' : ''}>${s}</option>`).join('')}
       </select>
     </label>
-  `, data => r.id ? api(`/api/customers/${r.id}`,{method:'PUT',body:JSON.stringify(data)}) : api('/api/customers',{method:'POST',body:JSON.stringify(data)}));
+  `, data => r.id
+      ? api(`/api/customers/${r.id}`, {method:'PUT', body:JSON.stringify(data)})
+      : api('/api/customers', {method:'POST', body:JSON.stringify(data)})
+  );
 }
 
-async function customerDetails(r){
+async function customerDetails(key) {
+  const r = cached(key);
   const d = await api(`/api/customers/${r.id}`);
   openModal('Customer Details', `
     <div class="md:col-span-2 rounded-3xl bg-water-50 p-5">
       <p class="font-display text-2xl font-extrabold text-water-900">${esc(d.customer.name)}</p>
-      <p class="font-mono text-sm text-water-700">${esc(d.customer.customer_code)} / Old: ${esc(d.customer.old_code||'-')}</p>
-      <p class="mt-2 text-sm text-slate-600">${esc(d.customer.address||'')}</p>
+      <p class="font-mono text-sm text-water-700">${esc(d.customer.customer_code)} / Old: ${esc(d.customer.old_code || '-')}</p>
+      <p class="mt-2 text-sm text-slate-600">${esc(d.customer.address || '')}</p>
     </div>
     <div class="md:col-span-2">
       <h4 class="mb-2 font-bold">Recent Readings</h4>
-      <div class="space-y-2">${d.readings.map(x=>`<div class="rounded-2xl border border-sky-100 p-3 text-sm">${x.fiscal_year}/${monthNames[x.fiscal_month]} — ${money(x.consumption)} m³ — ${x.status}</div>`).join('') || '<p class="text-sm text-slate-500">No readings yet.</p>'}</div>
+      <div class="space-y-2">
+        ${(d.readings || []).map(x => `<div class="rounded-2xl border border-sky-100 p-3 text-sm">${x.fiscal_year}/${monthNames[x.fiscal_month]} — ${money(x.consumption)} m³ — ${x.status}</div>`).join('') || '<p class="text-sm text-slate-500">No readings yet.</p>'}
+      </div>
     </div>
-  `, async()=>{});
-  $('modalForm').querySelector('button[type=submit]').style.display='none';
+  `, async () => {}, true);
 }
 
-async function renderReadings(){
+async function renderReadings() {
   const rows = await api(`/api/readings?fiscal_year=${fy()}&fiscal_month=${fm()}`);
   const summary = await api(`/api/reading-summary?fiscal_year=${fy()}&fiscal_month=${fm()}`);
-  const analysis = summary.analysis || {};
-  const body = `
-    <div class="grid gap-4 md:grid-cols-4">
-      ${card('Total Reading', summary.total_readings || 0, 'gauge')}
-      ${card('Negative', analysis.negative || 0, 'trending-down', 'red')}
-      ${card('Exaggerated', analysis.exaggerated || 0, 'triangle-alert', 'orange')}
-      ${card('Disconnected', analysis.disconnected || 0, 'unlink', 'slate')}
-    </div>
-    ${table('readingTable',['Customer','Code','Reader','Previous','Current','Consumption','Status','Period','Actions'])}
-  `;
-  $('view').innerHTML = pageShell('Reading Management',
+  const a = summary.analysis || {};
+
+  el('view').innerHTML = pageShell('Reading Management',
     `<button onclick="readingForm()" class="rounded-2xl bg-water-700 px-5 py-3 font-bold text-white shadow-soft hover:bg-water-800">Add Reading</button>
      <button onclick="rebuildSummary()" class="rounded-2xl border border-water-200 bg-white px-5 py-3 font-bold text-water-700">Rebuild Analysis</button>`,
-    body
+    `<div class="grid gap-4 md:grid-cols-4">
+      ${card('Total Reading', summary.total_readings || 0, 'gauge')}
+      ${card('Negative', a.negative || 0, 'trending-down', 'red')}
+      ${card('Exaggerated', a.exaggerated || 0, 'triangle-alert', 'orange')}
+      ${card('Disconnected', a.disconnected || 0, 'unlink', 'slate')}
+    </div>
+    ${table('readingTable',['Customer','Code','Reader','Previous','Current','Consumption','Status','Period','Actions'])}`
   );
+
   initDT('readingTable', rows, [
     'customer_name','customer_code','employee_name','previous_reading','current_reading',
-    r=>money(r.consumption), r=>`<span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold">${r.status}</span>`,
-    r=>`${r.fiscal_year} ${monthNames[r.fiscal_month]}`,
-    r=>`<div class="flex gap-1">
-      <button class="rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700" onclick='readingForm(${JSON.stringify(r)})'>Edit</button>
-      <button class="rounded-xl bg-red-50 px-3 py-2 text-xs font-bold text-red-700" onclick="deleteRow('/api/readings/${r.id}')">Delete</button>
-    </div>`
+    r => money(r.consumption),
+    r => `<span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold">${esc(r.status)}</span>`,
+    r => `${r.fiscal_year} ${monthNames[r.fiscal_month]}`,
+    r => {
+      const k = cacheRow(r);
+      return `<div class="flex gap-1">
+        <button class="rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700" onclick="readingForm(cached('${k}'))">Edit</button>
+        <button class="rounded-xl bg-red-50 px-3 py-2 text-xs font-bold text-red-700" onclick="deleteRow('/api/readings/${r.id}')">Delete</button>
+      </div>`;
+    }
   ]);
 }
 
-async function readingForm(r={}){
+async function readingForm(r = {}) {
   const customers = await api('/api/customers');
-  openModal(r.id?'Edit Reading':'Add Reading', `
+  openModal(r.id ? 'Edit Reading' : 'Add Reading', `
     ${select('customer_id','Customer',customers,r.customer_id)}
     ${select('employee_id','Meter Reader',state.refs.employees,r.employee_id)}
     ${select('device_id','Device',state.refs.devices,r.device_id,'serial_number')}
-    ${input('fiscal_year','Fiscal Year','number',r.fiscal_year||fy(),'required min="2000"')}
-    ${input('fiscal_month','Fiscal Month','number',r.fiscal_month||fm(),'required min="1" max="13"')}
+    ${input('fiscal_year','Fiscal Year','number',r.fiscal_year || fy(),'required min="2000"')}
+    ${input('fiscal_month','Fiscal Month','number',r.fiscal_month || fm(),'required min="1" max="13"')}
     ${input('previous_reading','Previous Reading','number',r.previous_reading ?? 0,'required step="0.01"')}
     ${input('current_reading','Current Reading','number',r.current_reading ?? 0,'required step="0.01"')}
-    <label class="md:col-span-2 block"><span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Notes</span>
-      <input name="notes" value="${esc(r.notes||'')}" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
+    <label class="md:col-span-2 block">
+      <span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Notes</span>
+      <input name="notes" value="${esc(r.notes || '')}" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
     </label>
-  `, data => r.id ? api(`/api/readings/${r.id}`,{method:'PUT',body:JSON.stringify(data)}) : api('/api/readings',{method:'POST',body:JSON.stringify(data)}));
+  `, data => r.id
+      ? api(`/api/readings/${r.id}`, {method:'PUT', body:JSON.stringify(data)})
+      : api('/api/readings', {method:'POST', body:JSON.stringify(data)})
+  );
 }
 
-async function rebuildSummary(){
-  await api('/api/reading-summary/rebuild',{method:'POST',body:JSON.stringify({fiscal_year:fy(),fiscal_month:fm()})});
+async function rebuildSummary() {
+  await api('/api/reading-summary/rebuild', {
+    method: 'POST',
+    body: JSON.stringify({fiscal_year: fy(), fiscal_month: fm()})
+  });
   toast('Reading period analysis rebuilt');
   renderReadings();
 }
 
-async function renderBilling(){
+async function renderBilling() {
   const rows = await api(`/api/billing?fiscal_year=${fy()}&fiscal_month=${fm()}`);
-  $('view').innerHTML = pageShell('Billing & Payment',
+  el('view').innerHTML = pageShell('Billing & Payment',
     `<button onclick="paymentForm()" class="rounded-2xl bg-water-700 px-5 py-3 font-bold text-white shadow-soft hover:bg-water-800">Record Payment</button>`,
     table('billTable',['Customer','Code','Consumption','Amount','Tax','Penalty','Total','Paid','Status','Actions'])
   );
+
   initDT('billTable', rows, [
-    'customer_name','customer_code', r=>money(r.consumption), r=>money(r.amount), r=>money(r.tax),
-    r=>money(r.penalty), r=>money(r.total_amount), r=>money(r.paid_amount), 'status',
-    r=>`<button class="rounded-xl bg-water-50 px-3 py-2 text-xs font-bold text-water-700" onclick='paymentForm(${JSON.stringify(r)})'>Pay</button>`
+    'customer_name','customer_code',
+    r => money(r.consumption),
+    r => money(r.amount),
+    r => money(r.tax),
+    r => money(r.penalty),
+    r => money(r.total_amount),
+    r => money(r.paid_amount),
+    'status',
+    r => {
+      const k = cacheRow(r);
+      return `<button class="rounded-xl bg-water-50 px-3 py-2 text-xs font-bold text-water-700" onclick="paymentForm(cached('${k}'))">Pay</button>`;
+    }
   ]);
 }
 
-async function paymentForm(bill=null){
+async function paymentForm(bill = null) {
   const bills = bill ? [bill] : await api(`/api/billing?fiscal_year=${fy()}&fiscal_month=${fm()}`);
   openModal('Record Payment', `
     ${select('billing_id','Bill',bills,bill?.id,'customer_name')}
-    ${input('paid_amount','Paid Amount','number',bill ? Math.max(0, Number(bill.total_amount||0)-Number(bill.paid_amount||0)) : 0,'required step="0.01" min="0"')}
-    <label class="block"><span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Method</span>
+    ${input('paid_amount','Paid Amount','number', bill ? Math.max(0, Number(bill.total_amount || 0) - Number(bill.paid_amount || 0)) : 0, 'required step="0.01" min="0"')}
+    <label class="block">
+      <span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Method</span>
       <select name="payment_method" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
         <option value="cash">Cash</option><option value="bank">Bank</option><option value="mobile">Mobile</option><option value="pos">POS</option>
       </select>
     </label>
     ${input('reference_number','Reference Number','text','')}
-  `, data => api('/api/payments',{method:'POST',body:JSON.stringify(data)}));
+  `, data => api('/api/payments', {method:'POST', body:JSON.stringify(data)}));
 }
 
-async function renderMaintenance(){
+async function renderMaintenance() {
   const rows = await api('/api/maintenance');
-  $('view').innerHTML = pageShell('Maintenance Requests',
+  el('view').innerHTML = pageShell('Maintenance Requests',
     `<button onclick="maintenanceForm()" class="rounded-2xl bg-water-700 px-5 py-3 font-bold text-white shadow-soft hover:bg-water-800">New Request</button>`,
     table('maintenanceTable',['Customer','Issue','Priority','Status','Assigned To','Requested','Actions'])
   );
+
   initDT('maintenanceTable', rows, [
     'customer_name','issue_type','priority','status','assigned_employee_name',
-    r=>new Date(r.requested_at).toLocaleDateString(),
-    r=>`<button class="rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700" onclick='maintenanceForm(${JSON.stringify(r)})'>Edit</button>`
+    r => new Date(r.requested_at).toLocaleDateString(),
+    r => {
+      const k = cacheRow(r);
+      return `<button class="rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700" onclick="maintenanceForm(cached('${k}'))">Edit</button>`;
+    }
   ]);
 }
 
-async function maintenanceForm(r={}){
+async function maintenanceForm(r = {}) {
   const customers = await api('/api/customers');
-  openModal(r.id?'Edit Maintenance':'New Maintenance Request', `
+  openModal(r.id ? 'Edit Maintenance' : 'New Maintenance Request', `
     ${select('customer_id','Customer',customers,r.customer_id)}
     <label class="block"><span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Issue Type</span>
       <select name="issue_type" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
-        ${['leak','meter_fault','no_water','sewerage','disconnection','other'].map(s=>`<option value="${s}" ${r.issue_type===s?'selected':''}>${s}</option>`).join('')}
+        ${['leak','meter_fault','no_water','sewerage','disconnection','other'].map(s => `<option value="${s}" ${r.issue_type === s ? 'selected' : ''}>${s}</option>`).join('')}
       </select>
     </label>
     <label class="block"><span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Priority</span>
       <select name="priority" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
-        ${['low','medium','high','critical'].map(s=>`<option value="${s}" ${r.priority===s?'selected':''}>${s}</option>`).join('')}
+        ${['low','medium','high','critical'].map(s => `<option value="${s}" ${r.priority === s ? 'selected' : ''}>${s}</option>`).join('')}
       </select>
     </label>
     <label class="block"><span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Status</span>
       <select name="status" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
-        ${['open','assigned','in_progress','resolved','closed'].map(s=>`<option value="${s}" ${r.status===s?'selected':''}>${s}</option>`).join('')}
+        ${['open','assigned','in_progress','resolved','closed'].map(s => `<option value="${s}" ${r.status === s ? 'selected' : ''}>${s}</option>`).join('')}
       </select>
     </label>
     ${select('assigned_employee_id','Assigned Employee',state.refs.employees,r.assigned_employee_id)}
     <label class="md:col-span-2 block"><span class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500">Description</span>
-      <input name="description" value="${esc(r.description||'')}" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
+      <input name="description" value="${esc(r.description || '')}" class="w-full rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm">
     </label>
-  `, data => r.id ? api(`/api/maintenance/${r.id}`,{method:'PUT',body:JSON.stringify(data)}) : api('/api/maintenance',{method:'POST',body:JSON.stringify(data)}));
+  `, data => r.id
+      ? api(`/api/maintenance/${r.id}`, {method:'PUT', body:JSON.stringify(data)})
+      : api('/api/maintenance', {method:'POST', body:JSON.stringify(data)})
+  );
 }
 
-async function renderSettings(){
-  const body = `
+async function renderSettings() {
+  el('view').innerHTML = pageShell('Master Data','',`
     <div class="grid gap-6 lg:grid-cols-2">
       ${table('zonesTable',['Code','Name','Description'])}
       ${table('groupsTable',['Code','Name','Zone'])}
       ${table('employeesTable',['Name','Role','Phone','Active'])}
       ${table('devicesTable',['Serial','Type','Status'])}
-    </div>`;
-  $('view').innerHTML = pageShell('Master Data', '', body);
+    </div>
+  `);
+
   initDT('zonesTable', state.refs.zones, ['code','name','description']);
-  initDT('groupsTable', state.refs.groups, ['code','name', r=>r.zone_name||'']);
-  initDT('employeesTable', state.refs.employees, ['name','role','phone', r=>r.is_active?'Yes':'No']);
+  initDT('groupsTable', state.refs.groups, ['code','name', r => r.zone_name || '']);
+  initDT('employeesTable', state.refs.employees, ['name','role','phone', r => r.is_active ? 'Yes' : 'No']);
   initDT('devicesTable', state.refs.devices, ['serial_number','device_type','status']);
 }
 
-async function deleteRow(path){
-  if(!confirm('Delete this record?')) return;
-  await api(path,{method:'DELETE'});
+async function deleteRow(path) {
+  if (!confirm('Delete this record?')) return;
+  await api(path, {method:'DELETE'});
   toast('Deleted successfully');
   refreshCurrent();
 }
 
-async function route(r){
+async function route(r) {
   state.route = r;
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('nav-active', b.dataset.route===r));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('nav-active', b.dataset.route === r));
+
   try {
-    if(r==='dashboard') await renderDashboard();
-    if(r==='customers') await renderCustomers();
-    if(r==='readings') await renderReadings();
-    if(r==='billing') await renderBilling();
-    if(r==='maintenance') await renderMaintenance();
-    if(r==='settings') await renderSettings();
+    if (r === 'dashboard') await renderDashboard();
+    if (r === 'customers') await renderCustomers();
+    if (r === 'readings') await renderReadings();
+    if (r === 'billing') await renderBilling();
+    if (r === 'maintenance') await renderMaintenance();
+    if (r === 'settings') await renderSettings();
     lucide.createIcons();
   } catch(e) {
-    $('view').innerHTML = `<div class="rounded-3xl border border-red-100 bg-red-50 p-6 font-bold text-red-700">${esc(e.message)}</div>`;
+    el('view').innerHTML = `<div class="rounded-3xl border border-red-100 bg-red-50 p-6 font-bold text-red-700">${esc(e.message)}</div>`;
   }
 }
 
 function refreshCurrent(){ route(state.route); }
 
-async function boot(){
-  const nowYear = new Date().getFullYear() - 7;
-  for(let y=nowYear-2;y<=nowYear+2;y++) $('fy').insertAdjacentHTML('beforeend', `<option value="${y}" ${y===nowYear?'selected':''}>FY ${y}</option>`);
-  for(let m=1;m<=13;m++) $('fm').insertAdjacentHTML('beforeend', `<option value="${m}" ${m===11?'selected':''}>${m} - ${monthNames[m]}</option>`);
-  document.querySelectorAll('.nav-btn').forEach(b=>b.onclick=()=>route(b.dataset.route));
-  $('fy').onchange=refreshCurrent; $('fm').onchange=refreshCurrent;
+async function boot() {
+  const currentFY = new Date().getFullYear() - 7;
+  for (let y = currentFY - 2; y <= currentFY + 2; y++) {
+    el('fy').insertAdjacentHTML('beforeend', `<option value="${y}" ${y === currentFY ? 'selected' : ''}>FY ${y}</option>`);
+  }
+
+  for (let m = 1; m <= 13; m++) {
+    el('fm').insertAdjacentHTML('beforeend', `<option value="${m}" ${m === 11 ? 'selected' : ''}>${m} - ${monthNames[m]}</option>`);
+  }
+
+  document.querySelectorAll('.nav-btn').forEach(b => b.onclick = () => route(b.dataset.route));
+  el('fy').onchange = refreshCurrent;
+  el('fm').onchange = refreshCurrent;
+
   await loadRefs();
   await route('dashboard');
 }
+
 boot();
 </script>
 </body>
